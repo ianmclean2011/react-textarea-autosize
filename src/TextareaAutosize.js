@@ -100,7 +100,7 @@ export default class TextareaAutosize extends React.Component {
     return (
       <textarea
         {...props}
-        onChange={this._onChange}
+        onInput={this._onChange}
         ref={this._onRootDOMNode}
         />
     );
@@ -218,6 +218,8 @@ export default class TextareaAutosize extends React.Component {
   }
 
 }
+
+TextareaAutosize.displayName = 'TextareaAutosize';
 
 function onNextFrame(cb) {
   if (window.requestAnimationFrame) {

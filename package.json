@@ -1,9 +1,9 @@
 {
-  "name": "react-textarea-autosize",
+  "name": "@ianmclean2011/react-textarea-autosize",
   "description": "textarea component for React which grows with content",
-  "version": "4.0.5",
+  "version": "4.0.6",
   "keywords": "autosize, grow, react, react-component, textarea",
-  "repository": "andreypopp/react-textarea-autosize",
+  "repository": "ianmclean2011/react-textarea-autosize",
   "license": "MIT",
   "main": "lib/TextareaAutosize.js",
   "author": "Andrey Popp <8mayday@gmail.com> (https://andreypopp.com/)",
