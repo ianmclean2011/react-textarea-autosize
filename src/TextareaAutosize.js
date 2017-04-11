@@ -110,11 +110,11 @@ export default class TextareaAutosize extends React.Component {
     this._resizeComponent();
     window.addEventListener('resize', this._resizeComponent);
   }
-
-  componentWillReceiveProps() {
-    // Re-render with the new content then recalculate the height as required.
-    this._clearNextFrame();
-    this._onNextFrameActionId = onNextFrame(this._resizeComponent);
+  
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.value !== this.props.value) { 
+      this._resizeComponent();
+    }
   }
 
   componentDidUpdate(prevProps, prevState) {
