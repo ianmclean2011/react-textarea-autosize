@@ -60,7 +60,6 @@ export default class TextareaAutosize extends React.Component {
     onHeightChange: emptyFunction,
     useCacheForDOMMeasurements: false
   }
-  props = _objectWithoutProperties(_props, ['valueLink', 'minRows', 'maxRows', 'onHeightChange', 'useCacheForDOMMeasurements', 'field', 'labelId']);
 
   constructor(props) {
     super(props);
