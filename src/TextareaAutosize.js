@@ -60,6 +60,7 @@ export default class TextareaAutosize extends React.Component {
     onHeightChange: emptyFunction,
     useCacheForDOMMeasurements: false
   }
+  props = _objectWithoutProperties(_props, ['valueLink', 'minRows', 'maxRows', 'onHeightChange', 'useCacheForDOMMeasurements', 'field', 'labelId']);
 
   constructor(props) {
     super(props);
@@ -82,6 +83,8 @@ export default class TextareaAutosize extends React.Component {
       maxRows: _maxRows,
       onHeightChange: _onHeightChange,
       useCacheForDOMMeasurements: _useCacheForDOMMeasurements,
+      field: field,
+      labelId: labelId,
       ...props,
     } = this.props;
     if (typeof valueLink === 'object') {
@@ -110,9 +113,9 @@ export default class TextareaAutosize extends React.Component {
     this._resizeComponent();
     window.addEventListener('resize', this._resizeComponent);
   }
-  
+
   componentWillReceiveProps(nextProps) {
-    if (nextProps.value !== this.props.value) { 
+    if (nextProps.value !== this.props.value) {
       this._resizeComponent();
     }
   }
