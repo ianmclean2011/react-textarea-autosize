@@ -14,8 +14,6 @@ export default class TextareaAutosize extends React.Component {
         current: PropTypes.any,
       }),
     ]),
-    field: PropTypes.any,
-    labelId: PropTypes.any,
     maxRows: PropTypes.number,
     minRows: PropTypes.number,
     onChange: PropTypes.func,
@@ -52,8 +50,6 @@ export default class TextareaAutosize extends React.Component {
       minRows: _minRows,
       onHeightChange: _onHeightChange,
       useCacheForDOMMeasurements: _useCacheForDOMMeasurements,
-      field: _field,
-      labelId: _labelId,
       ...props
     } = this.props;
 
