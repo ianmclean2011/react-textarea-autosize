@@ -14,6 +14,8 @@ export default class TextareaAutosize extends React.Component {
         current: PropTypes.any,
       }),
     ]),
+    field: PropTypes.any,
+    labelId: PropTypes.any,
     maxRows: PropTypes.number,
     minRows: PropTypes.number,
     onChange: PropTypes.func,
@@ -50,6 +52,8 @@ export default class TextareaAutosize extends React.Component {
       minRows: _minRows,
       onHeightChange: _onHeightChange,
       useCacheForDOMMeasurements: _useCacheForDOMMeasurements,
+      field: _field,
+      labelId: _labelId,
       ...props
     } = this.props;
 
@@ -64,7 +68,7 @@ export default class TextareaAutosize extends React.Component {
       props.style.overflow = 'hidden';
     }
 
-    return <textarea {...props} onChange={this._onChange} ref={this._onRef} />;
+    return <textarea {...props} onInput={this._onChange} ref={this._onRef} />;
   }
 
   componentDidMount() {
@@ -160,3 +164,5 @@ export default class TextareaAutosize extends React.Component {
     callback();
   };
 }
+
+TextareaAutosize.displayName = 'TextareaAutosize';
